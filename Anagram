@@ -1,0 +1,22 @@
+public class Anagram {
+    public static void main(String[] args) {
+        String s1 = "madam";
+        String s2 = "madam";
+        boolean flag = false;
+        for(int i = 0; i < s1.length(); i ++){
+            char p = s1.charAt(i);
+            flag = false;
+            for(int j = s2.length()-1; j > 0; j --){
+                if(p == s2.charAt(j)){
+                    flag = true;
+                }
+            }    
+        }
+        if(flag){
+            System.out.println("Anagaram");
+        }
+        else{
+            System.out.println("Not anagram");
+        }
+    }
+}
