@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class AlternatingFunction {
+  public static void main(String [] args){
+    Scanner sc = new Scanner(System.in);
+    String str = sc.nextLine();
+    
+    String st = Alternating(str);
+    System.out.println(st);
+    
+    
+  }
+  public static String Alternating(String str){
+    String rslt = "";
+    for(int i = 0; i < str.length(); i ++){
+      char p = str.charAt(i);
+      if(i % 2 == 0){
+        if(p >= 'a' && p <= 'z'){
+          p = (char)(p - 32);
+        }
+      }
+      else {
+          if(p >= 'A' && p <= 'Z'){
+            p = (char)(p + 32);
+          }
+        }    
+      rslt = rslt + p;
+    }
+    return rslt;
+  }
+  
+  
+  
+}
